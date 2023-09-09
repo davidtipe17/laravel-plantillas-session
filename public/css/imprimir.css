@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+}
+
+.ticket {
+    width: 76mm;
+    margin: 0 auto;
+    border: 1px solid #EDEDED;
+    padding: 10px;
+}
+
+.centrado {
+    text-align: center;
+    align-content: center;
+}
+
+td,
+th,
+tr,
+table {
+    border-top: 1px solid black;
+    border-collapse: collapse;
+}
+
+td.cantidad,
+th.cantidad {
+    width: 40px;
+    max-width: 40px;
+    word-break: break-all;
+}
+
+td.precio,
+th.precio {
+    width: 64px;
+    max-width: 64px;
+    word-break: break-all;
+}
+
+td.cantidad {
+    text-align: center;
+}
+
+td.precio {
+    text-align: right;
+}
+
+@media print {
+    @page {
+        size: 80mm 160mm;
+        margin: 0;
+    }
+    .oculto-impresion {
+        display: none !important;
+    }
+    .ticket {
+        border: none;
+        padding: 0;
+    }
+}
